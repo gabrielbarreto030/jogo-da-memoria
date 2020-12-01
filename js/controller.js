@@ -28,12 +28,15 @@ function createContentCard(card, cardElement) {
 function createContent(face, card, cardElement) {
     var faceElemet = document.createElement("div")
     faceElemet.classList.add(face)
-    if (face == FRONT) {
+    if (face === FRONT) {
+        
         var img = document.createElement("img")
         img.src = "./assets/" + card.card + ".png"
         faceElemet.appendChild(img)
-    } else {
-        faceElemet.innerHTML = "&lt/&gt;"
+        
+    } else {       
+      
+          faceElemet.innerHTML= "&lt/&gt;"
     }
     cardElement.appendChild(faceElemet)
 }
